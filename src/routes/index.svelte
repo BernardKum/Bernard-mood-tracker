@@ -15,18 +15,9 @@
    	 const { data, error } = await supabase.from('moodEntries').select();
    	 if (error) alert(error.message);
 
-
-    async function logout() {
-   	 const { error } = await supabase.auth.signOut();
-
-   	 if (error) alert(error.message); // alert if error
-        return data;
+   	 return data;
     }
-    }
-
-
 </script>
-
 
 <Greeting />
 <!--   Entries   -->
@@ -67,4 +58,3 @@
 </section>
 
 <EntryModal />
-
