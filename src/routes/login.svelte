@@ -7,7 +7,7 @@
     async function loginUser() {
    	 const { error } = await supabase.auth.signIn({
    		 email,
-   		 password
+   		 password	
    	 });
 
    	 if (error) alert(error.message); // alert if error
